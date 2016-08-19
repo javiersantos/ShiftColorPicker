@@ -12,6 +12,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LineColorPicker extends View {
 
 	public static final int HORIZONTAL = 0;
@@ -330,6 +333,15 @@ public class LineColorPicker extends View {
 	}
 
 	/**
+	 * Return currently selected position.
+	 */
+	public int getSelectedPosition() {
+		List<Integer> colorsList = intToIntegerList(colors);
+
+		return colorsList.indexOf(selectedColor)+1;
+	}
+
+	/**
 	 * Set selected color as color value from palette.
 	 */
 	public void setSelectedColor(int color) {
@@ -384,6 +396,15 @@ public class LineColorPicker extends View {
 		}
 
 		return cellSize;
+	}
+
+	private List<Integer> intToIntegerList(int[] list) {
+		List<Integer> res = new ArrayList<>();
+		for (int aList : list) {
+			res.add(aList);
+		}
+
+		return res;
 	}
 
 	/**
