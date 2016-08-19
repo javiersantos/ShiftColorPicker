@@ -1,8 +1,32 @@
-##Simple vertical and horizontal color picker
+<h1 align="center">ShiftColorPicker</h1>
+<h4 align="center">Android Library</h4>
 
-![Alt text](/screenshot.png?raw=true)
+<p align="center">
+  <a target="_blank" href="https://android-arsenal.com/api?level=9"><img src="https://img.shields.io/badge/API-9%2B-orange.svg"></a>
+</p>
 
-[ ![Download](https://api.bintray.com/packages/dasar/maven/shiftcolorpicker/images/download.svg) ](https://bintray.com/dasar/maven/shiftcolorpicker/_latestVersion)
+<p align="center">ShiftColorPicker is simple vertical and horizontal color picker. This library is a fork from the original <a href="https://github.com/DASAR/ShiftColorPicker">ShiftColorPicker library</a> by DASAR and includes a method to retrieve the selected position (like a RatingBar).
+</p>
+
+![ShiftColorPicker Library](/screenshot.png?raw=true)
+
+##How to include
+
+Add the repository to your project **build.gradle**:
+```Javascript
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+```
+
+And add the library to your module **build.gradle**:
+```Javascript
+dependencies {
+    compile 'com.github.javiersantos:ShiftColorPicker:0.6'
+}
+```
 
 ##Usage
 
@@ -42,22 +66,12 @@ colorPicker.setOnColorChangedListener(new OnColorChangedListener() {
 
 // get selected color
 int color = colorPicker.getColor();
+
+// get current selected position
+int selectedPosition = colorPicker.getSelectedPosition();
 ```
 
-##Downlaod
-
-###Gradle
-```gradle
-repositories {
-     maven {
-        url  "http://dl.bintray.com/dasar/maven"
-     }
-}
-
-compile(group: 'uz.shift', name: 'colorpicker', version: '0.5', ext: 'aar')
-```
-
-###[Releases page](https://github.com/DASAR/ShiftColorPicker/releases) 
+###[Releases page](https://github.com/javiersantos/ShiftColorPicker/releases) 
 or grab latest version from repository.
 
 ##Requirements
