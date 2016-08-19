@@ -24,7 +24,7 @@ repositories {
 And add the library to your module **build.gradle**:
 ```Javascript
 dependencies {
-    compile 'com.github.javiersantos:ShiftColorPicker:0.6'
+    compile 'com.github.javiersantos:ShiftColorPicker:v0.6'
 }
 ```
 
