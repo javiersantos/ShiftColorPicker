@@ -6,8 +6,10 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -68,6 +70,10 @@ public class MainActivity extends Activity {
 
 		final LineColorPicker xmlPicker = (LineColorPicker) findViewById(R.id.picker3);
 		xmlPicker.setOnColorChangedListener(onChangeListener);
+	}
+
+	public void displaySelectedPosition(View view) {
+		Toast.makeText(this, Integer.toString(horizontalPicker.getSelectedPosition()), Toast.LENGTH_SHORT).show();
 	}
 
 	/**
